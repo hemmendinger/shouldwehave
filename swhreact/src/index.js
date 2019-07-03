@@ -18,8 +18,8 @@ const routing = (
         <div>
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/Contact">Contact</Link></li>
-                <li><Link to="/Users">Users</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/users">Users</Link></li>
             </ul>
             <Switch>
                 <Route exact path="/" component={App} />
