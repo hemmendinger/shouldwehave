@@ -4,7 +4,7 @@ import './index.css';
 import {
     BrowserRouter as Router,
     Route,
-    Link,
+    NavLink,
     Switch,
 } from 'react-router-dom';
 import App from './App';
@@ -17,9 +17,9 @@ const routing = (
     <Router>
         <div>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/users">Users</Link></li>
+                <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+                <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
+                <li><NavLink activeClassName="active" to="/users">Users</NavLink></li>
             </ul>
             <Switch>
                 <Route exact path="/" component={App} />
