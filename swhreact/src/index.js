@@ -14,6 +14,12 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
     <Router>
         <div>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/">Contact</Link></li>
+                <li><Link to="/">Users</Link></li>
+            </ul>
+
             <Route exact path="/" component={App} />
             <Route path="/users" component={Users} />
             <Route path="/contact" component={Contact} />
