@@ -4,11 +4,13 @@ import './index.css';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch,
 } from 'react-router-dom';
 import App from './App';
 import Contact from './contact';
 import Users from './users'
+import NotFound from './statusCodes';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -19,10 +21,12 @@ const routing = (
                 <li><Link to="/Contact">Contact</Link></li>
                 <li><Link to="/Users">Users</Link></li>
             </ul>
-
-            <Route exact path="/" component={App} />
-            <Route path="/users" component={Users} />
-            <Route path="/contact" component={Contact} />
+            <Switch>
+                <Route exact path="/" component={App} />
+                <Route path="/users" component={Users} />
+                <Route path="/contact" component={Contact} />
+                <Route component={NotFound} />
+            </Switch>
         </div>
     </Router>
 );
