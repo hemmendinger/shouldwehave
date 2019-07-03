@@ -8,6 +8,7 @@ import {
     Switch,
 } from 'react-router-dom';
 import App from './App';
+import About from './about';
 import Contact from './contact';
 import Users from './users'
 import NotFound from './statusCodes';
@@ -20,11 +21,13 @@ const routing = (
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
                 <li><NavLink activeClassName="active" to="/users">Users</NavLink></li>
+                <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
             </ul>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/users/:id" component={Users} />
+                <Route path="/users" component={Users} />
                 <Route path="/contact" component={Contact} />
+                <Route path="/about" component={About} />
                 <Route component={NotFound} />
             </Switch>
         </div>
