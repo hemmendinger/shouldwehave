@@ -15,10 +15,10 @@ def get_postgres_db_uri():
     """
 
     db_uri = 'postgresql+psycopg2://{user}:{pw}@{host}/{db}'.format(
-        user=os.environ['POSTGRES_USER'],
-        pw=os.environ['POSTGRES_PASSWORD'],
-        host=os.environ['POSTGRES_HOST'],
-        db=os.environ['POSTGRES_DB'],
+        user=os.environ.get('POSTGRES_USER'),
+        pw=os.environ.get('POSTGRES_PASSWORD'),
+        host=os.environ.get('POSTGRES_HOST'),
+        db=os.environ.get('POSTGRES_DB'),
     )
 
     return db_uri
@@ -36,11 +36,12 @@ class DevelopmentConfig(BaseConfig):
     TESTING = True
     SECRET_KEY = 'dev'
     SQLALCHEMY_DATABASE_URI = get_postgres_db_uri()
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProductionConfig(BaseConfig):
     DEBUG = False
-    SECRET_KEY = os.environ['FLASK_SECRET_KEY']
+    SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = get_postgres_db_uri()
 
 
