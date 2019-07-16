@@ -1,5 +1,6 @@
 # shouldwehave
 
+Working through boilerplate/learning curves.
 
 
 ## Configuration
