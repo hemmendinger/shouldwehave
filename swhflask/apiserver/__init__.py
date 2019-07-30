@@ -12,13 +12,16 @@ def create_app(run_config=None):
     else:
         app.config.from_object(configs[run_config])
 
-
-    from . import models
-    models.init_app(app)
-
+    from .models import db
+    db.init_app(app)
 
     from . import commands
     commands.init_app(app)
+
+    @app.route('/hello')
+    def hello():
+        """For testing server, remove later"""
+        return 'Hello, World!'
 
     return app
 
