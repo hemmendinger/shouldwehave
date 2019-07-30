@@ -30,6 +30,8 @@ class BaseConfig(object):
     """
     DEBUG = True
     TESTING = False
+    # cross site request forgery protection
+    CSRF_ENABLED = True
 
 
 class DevelopmentConfig(BaseConfig):
