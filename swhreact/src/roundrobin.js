@@ -30,7 +30,7 @@ class RoundRobin extends React.Component {
         return (
             <div id={'rrmode'}>
 
-            <h1>Round Robin Mode</h1>
+            <h2>Round Robin Mode</h2>
             <Dialog step={this.state['step']}/>
 
             <Input />
