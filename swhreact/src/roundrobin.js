@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 class RoundRobin extends React.Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class RoundRobin extends React.Component {
         }
     }
 
-    render () {
+    render() {
         return (
             <div id={'rrmode'}>
 
@@ -69,10 +70,8 @@ class Input extends React.Component {
             <div>
                 <ul>
                     <li>
-
                     </li>
                     <li>
-
                     </li>
                 </ul>
                 <button>Add item</button>
@@ -81,18 +80,16 @@ class Input extends React.Component {
     }
 }
 
-
-
 class StepButtons extends React.Component {
     render() {
         return (
-
             <div>
-                <button onClick={(e) => this.props.buttonClick(e, 'back')} >Back</button>
-                <button onClick={(e) => this.props.buttonClick(e, 'next')}>Next</button>
+                <Button onClick={(e) => this.props.buttonClick(e, 'back')} >Back</Button>
+                <Button onClick={(e) => this.props.buttonClick(e, 'next')}>Next</Button>
             </div>
         );
     }
+
 }
 
 export default RoundRobin;
