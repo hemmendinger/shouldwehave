@@ -36,7 +36,7 @@ class RoundRobin extends React.Component {
             <Input />
 
             <StepButtons buttonClick={this.handleChangeStep.bind(this)} />
-            /* TODO: Clear state button */
+                {/* TODO: Clear state button */}
             </div>
         );
     }
@@ -84,8 +84,8 @@ class StepButtons extends React.Component {
     render() {
         return (
             <div>
-                <Button onClick={(e) => this.props.buttonClick(e, 'back')} >Back</Button>
-                <Button onClick={(e) => this.props.buttonClick(e, 'next')}>Next</Button>
+                <Button color="primary" size="large" variant="contained" onClick={(e) => this.props.buttonClick(e, 'back')}>Back</Button>
+                <Button color="primary" size="large" variant="contained" onClick={(e) => this.props.buttonClick(e, 'next')}>Next</Button>
             </div>
         );
     }
