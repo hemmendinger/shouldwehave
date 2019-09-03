@@ -74,7 +74,7 @@ class Input extends React.Component {
                     <li>
                     </li>
                 </ul>
-                <button>Add item</button>
+                <Button color="secondary" size="large" variant="contained">Add item</Button>
             </div>
         );
     }
