@@ -2,7 +2,7 @@ import React from 'react';
 
 import {ThemeProvider} from '@material-ui/styles';
 import {createMuiTheme} from '@material-ui/core/styles'
-import {blue, indigo, red} from '@material-ui/core/colors'
+import {blue, cyan, indigo, red} from '@material-ui/core/colors'
 
 import {
   BrowserRouter as Router,
@@ -20,9 +20,16 @@ import NotFound from './statusCodes';
 
 const theme = createMuiTheme({
   palette: {
-    secondary: blue,
-    primary: indigo,
+    primary: blue,
+    secondary: cyan,
     error: red,
+    background: {
+      paper: red,
+      default: red,
+    }
+    },
+  shape: {
+    borderRadius: 20, // Round borders
   },
 });
 
