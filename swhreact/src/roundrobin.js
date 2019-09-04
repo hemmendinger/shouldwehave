@@ -6,6 +6,13 @@ class RoundRobin extends React.Component {
         super(props);
         this.state = {
             step: 0,
+            stepLabels: {
+                0: 'Intro',
+                1: 'Add Names',
+                2: 'Add Menu Options',
+                3: 'Voting',
+                4: 'Results',
+            },
             stepMax: 4,
             options: [],
             users: [],
@@ -26,6 +33,8 @@ class RoundRobin extends React.Component {
         }
     }
 
+
+
     render() {
         return (
             <div id={'rrmode'}>
@@ -33,7 +42,8 @@ class RoundRobin extends React.Component {
             <h2>Round Robin Mode</h2>
             <Dialog step={this.state['step']}/>
 
-            <Input />
+            if
+            <InputList />
 
             <StepButtons buttonClick={this.handleChangeStep.bind(this)} />
                 {/* TODO: Clear state button */}
@@ -59,7 +69,7 @@ class Dialog extends React.Component {
     }
 }
 
-class Input extends React.Component {
+class InputList extends React.Component {
     constructor(props) {
         super(props);
     }
