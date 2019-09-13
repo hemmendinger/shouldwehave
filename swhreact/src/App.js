@@ -4,6 +4,8 @@ import {ThemeProvider} from '@material-ui/styles';
 import {createMuiTheme} from '@material-ui/core/styles'
 import {blue, cyan, indigo, red} from '@material-ui/core/colors'
 
+import Container from '@material-ui/core/Container';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -38,6 +40,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ThemeProvider theme={theme}>
+          <Container maxWidth="sm">
           <header className="App-header">
             <h1 className="App-title">shouldwehave</h1>
           </header>
@@ -60,6 +63,7 @@ class App extends React.Component {
               </Switch>
             </div>
           </Router>
+          </Container>
         </ThemeProvider>
       </div>
     )
