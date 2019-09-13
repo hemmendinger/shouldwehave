@@ -33,19 +33,19 @@ class RoundRobin extends React.Component {
         }
     }
 
-
-
     render() {
+        let dataEntry;
+
+        if (this.state['step'] == 1) {
+            dataEntry = <InputList />;
+        }
+
         return (
             <div id={'rrmode'}>
-
-            <h2>Round Robin Mode</h2>
-            <Dialog step={this.state['step']}/>
-
-            if
-            <InputList />
-
-            <StepButtons buttonClick={this.handleChangeStep.bind(this)} />
+                <h2>Round Robin Mode</h2>
+                <Dialog step={this.state['step']}/>
+                {dataEntry}
+                <StepButtons buttonClick={this.handleChangeStep.bind(this)} />
                 {/* TODO: Clear state button */}
             </div>
         );
