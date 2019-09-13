@@ -29,7 +29,7 @@ const theme = createMuiTheme({
       paper: red,
       default: red,
     }
-    },
+  },
   shape: {
     borderRadius: 20, // Round borders
   },
@@ -41,28 +41,28 @@ class App extends React.Component {
       <div className="App">
         <ThemeProvider theme={theme}>
           <Container maxWidth="sm">
-          <header className="App-header">
-            <h1 className="App-title">shouldwehave</h1>
-          </header>
-          <Router>
-            <div>
-              <ul>
-                <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-                <li><NavLink activeClassName="active" to="/roundrobin">Try It Out</NavLink></li>
-                <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
-                <li><NavLink activeClassName="active" to="/users">Users</NavLink></li>
-                <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
-              </ul>
-              <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/roundrobin" component={RoundRobin}/>
-                <Route path="/users" component={Users}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/about" component={About}/>
-                <Route component={NotFound}/>
-              </Switch>
-            </div>
-          </Router>
+            <header className="App-header">
+              <h1 className="App-title">shouldwehave</h1>
+            </header>
+            <Router>
+              <div>
+                <ul>
+                  <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+                  <li><NavLink activeClassName="active" to="/roundrobin">Try It Out</NavLink></li>
+                  <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
+                  <li><NavLink activeClassName="active" to="/users">Users</NavLink></li>
+                  <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
+                </ul>
+                <Switch>
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/roundrobin" component={RoundRobin}/>
+                  <Route path="/users" component={Users}/>
+                  <Route path="/contact" component={Contact}/>
+                  <Route path="/about" component={About}/>
+                  <Route component={NotFound}/>
+                </Switch>
+              </div>
+            </Router>
           </Container>
         </ThemeProvider>
       </div>
