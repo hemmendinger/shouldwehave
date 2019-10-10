@@ -31,7 +31,7 @@ const theme = createMuiTheme({
     }
   },
   shape: {
-    borderRadius: 20, // Round borders
+    borderRadius: 1, // Round borders
   },
 });
 
