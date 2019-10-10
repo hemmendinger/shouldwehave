@@ -23,12 +23,12 @@ class RoundRobin extends React.Component {
     }
 
     handleChangeStep(event, msg) {
-        if (msg == 'next' && this.state.step < this.state.stepMax) {
+        if (msg === 'next' && this.state.step < this.state.stepMax) {
             console.log(msg);
             this.setState((state) => ({
                 step: this.state.step + 1})
             );
-        } else if (msg == 'back' && this.state.step > 0) {
+        } else if (msg === 'back' && this.state.step > 0) {
             this.setState((state) => ({
                 step: this.state.step - 1})
             );
@@ -38,9 +38,9 @@ class RoundRobin extends React.Component {
     render() {
         let dataEntry;
 
-        if (this.state['step'] == 1) {
+        if (this.state['step'] === 1) {
             dataEntry = <InputList />;
-        } else if (this.state['step'] == 2) {
+        } else if (this.state['step'] === 2) {
             dataEntry = <InputList />;
         }
 
