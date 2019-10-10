@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 class RoundRobin extends React.Component {
     constructor(props) {
@@ -80,12 +82,10 @@ class InputList extends React.Component {
 
         return (
             <div>
-                <ul>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                </ul>
+                <List>
+                    <ListItem alignItems="flex-start">placeholder</ListItem>
+                    <ListItem alignItems="flex-start">placeholder</ListItem>
+                </List>
                 <Button color="secondary" size="large" variant="contained">Add another</Button>
             </div>
         );
